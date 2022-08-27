@@ -1,4 +1,4 @@
-module github.com/deltabyte/aws-mfa-util
+module github.com/deltabyte/aws-mfa
 
 go 1.19
 
