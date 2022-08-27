@@ -22,7 +22,7 @@ type SourceProfile struct {
 }
 
 func (cfg *Config) Save() error {
-	configPath, _ := homedir.Expand("~/aws-mfa-util.json")
+	configPath, _ := homedir.Expand("~/.aws-mfa.json")
 
 	// encode JSON
 	raw, err := json.Marshal(cfg)
@@ -35,7 +35,7 @@ func (cfg *Config) Save() error {
 }
 
 func LoadConfig() *Config {
-	configPath, _ := homedir.Expand("~/aws-mfa-util.json")
+	configPath, _ := homedir.Expand("~/.aws-mfa.json")
 	config := &Config{SourceProfiles: map[string]SourceProfile{}}
 
 	// try to read config file
